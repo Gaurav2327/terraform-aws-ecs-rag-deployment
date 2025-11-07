@@ -25,7 +25,7 @@ jobs:
         with:
           format: 'table'
           image-ref: ${{ secrets.DOCKER_USER }}/ecs-rag:${{ github.sha }}
-          severity: 'HING,CRITICAL'
+          severity: 'HIGH,CRITICAL'
 
       - name: push image
         run: docker push ${{ secrets.DOCKER_USER }}/rag:${{ github.sha }}
