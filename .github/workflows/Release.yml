@@ -18,7 +18,7 @@ jobs:
       - name: build image
         run: |
           cd backend
-          docker build -t ${{ secrets.DOCKER_USER }}/rag:${{ github.sha }} Dockerfile .
+          docker build -t ${{ secrets.DOCKER_USER }}/rag:${{ github.sha }} .
 
       - name: scan image
         uses: aquasecurity/trivy-action@0.25.0
